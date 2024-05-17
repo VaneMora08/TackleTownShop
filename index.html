@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tackle Town Shop</title>
+    <title>Tackle Town - Tienda de Fútbol Americano</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <header>
+        <h1>Tackle Town</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="about Us.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#cart" onclick="mostrarCarrito()">Carrito <span id="cart-count">(0)</span></a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <img src="assets/img/banner 1.png" alt="Banner">
+        </div>
+        <div class="welcome-message">
+            <h2>Bienvenidos a Tackle Town</h2>
+            <p>Tu tienda de confianza para todos los artículos de fútbol americano.</p>
+        </div>
+    </section>
     
+    <section id="about">
+        <p>En <strong>Tackle Town</strong>, somos apasionados del fútbol americano y entendemos la importancia de contar con el mejor equipamiento para maximizar el rendimiento en el campo. Fundada por entusiastas del deporte, nuestra misión es proporcionar productos de alta calidad a jugadores y aficionados de todos los niveles.</p>
+        <p>Nuestra tienda ofrece una amplia gama de artículos que incluyen equipamiento esencial como cascos y hombreras, ropa deportiva cómoda y duradera, y accesorios indispensables como balones y protectores bucales. Nos esforzamos por ofrecer un catálogo variado que cubra todas las necesidades de nuestros clientes, desde principiantes hasta profesionales.</p>
+        <p>En Tackle Town, valoramos la excelencia tanto en nuestros productos como en nuestro servicio al cliente. Creemos que cada jugador merece lo mejor, por eso seleccionamos cuidadosamente cada artículo que vendemos para asegurar su calidad y rendimiento.</p>
+        <p>Nuestro equipo está siempre dispuesto a ayudar y asesorar a nuestros clientes para que encuentren el producto perfecto que se ajuste a sus necesidades. Ya sea que estés buscando mejorar tu equipo o encontrar el regalo ideal para un amante del fútbol americano, estamos aquí para ayudarte.</p>
+        <p>Gracias por elegir Tackle Town. Estamos comprometidos a ser tu aliado en el campo, ofreciéndote los mejores productos y la mejor experiencia de compra posible. ¡Nos vemos en la zona de anotación!</p>
+    </section>
+
+    <section id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product">
+            <img src="assets/img/casco1.jpg" alt="Casco de Fútbol Americano">
+            <h3>Casco </h3>
+            <p>Protección superior para cada jugada.</p>
+            <button class="add-to-cart">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="assets/img/jersey.jpg" alt="Jersey de Fútbol Americano">
+            <h3>Jerseis </h3>
+            <p>Comodidad y seguridad en el campo.</p>
+            <button class="add-to-cart">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="assets/img/pproduct1.jpeg" alt="Pantalones de Fútbol Americano">
+            <h3>Pants </h3>
+            <p>Comodidad y seguridad en el campo.</p>
+            <button class="add-to-cart">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="assets/img/ball.jpg" alt="Balones de Fútbol Americano">
+            <h3>Hombreras de Fútbol Americano</h3>
+            <p>Comodidad y seguridad en el campo.</p>
+            <button class="add-to-cart">Añadir al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="assets/img/gproduct1.jpg" alt="guantes de Fútbol Americano">
+            <h3>Hombreras de Fútbol Americano</h3>
+            <p>Comodidad y seguridad en el campo.</p>
+            <button class="add-to-cart">Añadir al Carrito</button>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tackle Town. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart" class="cart">
+        <div class="cart-content">
+            <span class="close" onclick="cerrarCarrito()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <script src="car.js"></script>
 </body>
 </html>
